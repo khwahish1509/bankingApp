@@ -24,6 +24,7 @@ import CustomInput from './CustomInput';
 import { Loader2 } from 'lucide-react';
 import Signup from '@/app/(auth)/sign-up/page';
 import { useRouter } from 'next/navigation';
+import { signIn, signUp } from '@/lib/actions/user.action';
 const formSchema = z.object({
     email: z.string().email(),
 })
@@ -70,18 +71,18 @@ const AuthForm = ({type}:{type: string}) => {
 // In simple words, await is a keyword used in programming to pause and 
 //wait for something to finish before moving on.
 
-        // const newUser = await signUp(userData);
+        const newUser = await signUp(userData);
 
-        // setUser(newUser);
+        setUser(newUser);
       }
 
       if(type === 'sign-in') {
-        // const response = await signIn({
-        //   email: data.email,
-        //   password: data.password,
-        // })
+        const response = await signIn({
+          email: data.email,
+          password: data.password,
+        })
 
-        // if(response) router.push('/')
+        if(response) router.push('/')
       }
     } catch (error) {
       console.log(error);
