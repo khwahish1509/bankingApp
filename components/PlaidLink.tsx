@@ -1,3 +1,19 @@
+// This file creates a special button for a website that helps users connect their bank account. 
+// The button uses a service called Plaid to make this connection safe and easy.
+// When someone clicks the button, it opens a window where they can choose their bank and log in. 
+// Once they do this successfully, the website gets a special code that lets it access some information from the user's bank account.
+// The button can look different depending on how the website wants to show it. 
+// It might be a regular button that says "Connect bank", or it could be a more subtle button with a little picture of a bank.
+
+// The code makes sure everything happens in the right order:
+
+// It gets ready to connect to Plaid
+// It waits for the user to click the button
+// It helps the user connect their bank
+// It tells the website that the connection worked
+
+// This makes it simple for people to safely link their bank to the website without the website ever seeing their bank password.
+
 import React, { useCallback, useEffect, useState } from 'react'
 import { Button } from './ui/button'
 import { PlaidLinkOnSuccess, PlaidLinkOptions, usePlaidLink } from 'react-plaid-link'
