@@ -19,6 +19,7 @@ const DoughnutChart = ( {accounts}: DoughnutChartProps )=> {
   
   return <Doughnut data={data}
   options={{
+    
     cutout: "60%",
     plugins:{
       legend:{

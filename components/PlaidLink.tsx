@@ -13,7 +13,6 @@
 // It tells the website that the connection worked
 
 // This makes it simple for people to safely link their bank to the website without the website ever seeing their bank password.
-
 import React, { useCallback, useEffect, useState } from 'react'
 import { Button } from './ui/button'
 import { PlaidLinkOnSuccess, PlaidLinkOptions, usePlaidLink } from 'react-plaid-link'
