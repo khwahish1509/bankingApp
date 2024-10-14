@@ -1,3 +1,11 @@
+// This file creates a footer for a website. The footer shows information about the user who's logged in, 
+// like their name and email. It also has a logout button. The footer can look different on phones and computers. 
+// When someone clicks the logout button, it logs them out and takes them back to the login page. 
+// \The footer is smart - it knows who's using the website and shows their details. 
+// It's like a small personal space at the bottom of each page that reminds you who you are and gives you a quick way to leave if you want to. 
+// The code uses special tools to make this footer work smoothly on the website, 
+// making sure it looks good and does its job properly no matter what device you're using.
+
 import { logoutAccount } from '@/lib/actions/user.actions'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
